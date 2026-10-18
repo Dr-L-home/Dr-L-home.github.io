@@ -7,9 +7,9 @@ window.SITE = {
   tagline: "一個數獨 App，和它背後的解題思路。",
 
   links: {
-    webApp: "https://github.com/Dr-L-home/Dr-L-home.github.io",      // 網頁版數獨的網址
+    webApp: "",      // 網頁版數獨的網址
     playStore: "",   // Google Play 商店頁網址（上架後填入）
-    repo: "https://github.com/Dr-L-home/Dr-L-home.github.io",        // 原始碼所在的 GitHub 專案網址
+    repo: "",        // 原始碼所在的 GitHub 專案網址
     email: "lyliao76@gmail.com"        // 聯絡信箱
   },
 
