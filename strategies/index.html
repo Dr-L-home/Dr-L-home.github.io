@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>數獨解題策略｜數獨</title>
+<meta name="description" content="用動畫逐步介紹 27 種數獨解題策略，從唯一候選到 XY 鏈與試錯法。">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600&family=STIX+Two+Text:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/site.css">
+<link rel="stylesheet" href="strategies.css">
+</head>
+<body data-depth="1" class="no-js">
+<script>document.body.classList.remove('no-js')</script>
+<div class="wrap">
+  <header class="bar"><a class="brand" data-brand href="../">數獨</a><nav data-nav></nav></header>
+</div>
+<nav class="chips" id="chips" aria-label="章節"></nav>
+<div class="layout">
+  <aside class="side" aria-label="目錄"><h4>目錄</h4><ol id="toc"></ol></aside>
+  <main>
+    <section class="top">
+      <div class="hero-wrap">
+        <div>
+          <h1 class="draw-title">數獨解題策略</h1>
+          <p class="lead">共 <span data-count>27</span> 種策略。每一種都用一張小圖，一步一步看它在找什麼、能劃掉什麼、最後得到什麼。</p>
+          <p class="lead" id="intro"></p>
+          <div class="legend" aria-label="圖例">
+            <span><i style="background:rgba(88,196,221,.3)"></i>候選數字</span>
+            <span><i style="background:#58c4dd"></i>關鍵格</span>
+            <span><i style="background:#ff862f"></i>對照格</span>
+            <span><i style="background:rgba(252,98,85,.4)"></i>可劃掉</span>
+            <span><i style="background:#83c167"></i>答案</span>
+          </div>
+        </div>
+        <div id="hero-board"></div>
+      </div>
+    </section>
+    <div id="chapters"></div>
+    <p class="outro" id="outro"></p>
+    <footer class="foot">視覺風格致敬 3Blue1Brown；本站與其無關。<br>© <span data-year></span> <span data-owner></span></footer>
+  </main>
+</div>
+<script src="../js/config.js"></script>
+<script src="../js/site.js"></script>
+<script src="../js/scenes.js"></script>
+<script src="../js/scene.js"></script>
+<script>
+  // 標題底線：進入畫面時畫出
+  (function(){ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('seen');io.unobserve(e.target)}})},{threshold:.4});
+  document.addEventListener('DOMContentLoaded',function(){document.querySelectorAll('.scene').forEach(function(x){io.observe(x)})}); })();
+</script>
+</body>
+</html>
